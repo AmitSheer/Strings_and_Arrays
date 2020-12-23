@@ -1,3 +1,0 @@
-/Users/amits/sharevm/Strings_and_Arrays/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/amits/sharevm/Strings_and_Arrays/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/amits/sharevm/Strings_and_Arrays/cmake-build-debug/CMakeFiles/Strings_and_Arrays.dir
