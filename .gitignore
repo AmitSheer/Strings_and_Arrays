@@ -171,3 +171,9 @@ local.properties
 *.json
 saveAndLoad
 /out/production/
+/cmake-build-debug/
+/cmake-build-debug-remote-host/
+/isort.dSYM/
+/main.dSYM/
+/main.o.dSYM/
+/txtfind.dSYM/
