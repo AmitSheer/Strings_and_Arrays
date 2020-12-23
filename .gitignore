@@ -1,2 +1,2 @@
-./cmake-*
-./*.dSYM
+cmake-*
+*.dSYM
