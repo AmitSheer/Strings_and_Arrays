@@ -58,7 +58,6 @@ void printWord(char* text,int index,int len){
 }
 void printSimilarWords(char searchWord[],int len){
     char text[MAX_TEXT_LINES*LINE];
-
     while(fgets(text, MAX_TEXT_LINES*LINE, stdin)){
         int lineLen = getLineLen(text);
         for (int i = 0; i < lineLen; ++i) {
@@ -76,11 +75,10 @@ void printSimilarWords(char searchWord[],int len){
 
 void printShowLines(char searchWord[],int len){
     char text[MAX_TEXT_LINES*LINE];
-    int wordLen = getWordLen(searchWord);
     while(fgets(text, MAX_TEXT_LINES*LINE, stdin)){
         int lineLen = getLineLen(text);
         for (int i = 0; i < lineLen; ++i) {
-            if(checkSimilar(searchWord,text, i, wordLen)){
+            if(checkSimilar(searchWord,text, i, len)){
                 printf(" %s\n", text);
                 break;
             }
