@@ -34,15 +34,19 @@ int checkSimilar(char* searchWord,char* line, int index, int searchWordLen){
     }
     return 1;
 }
-
+//checks if word is similar to search word
 int similarAfterSub(char* searchWord,char* line, int index, int searchWordLen){
     char subWord[searchWordLen];
     int i =0;
     for (; i < searchWordLen; ++i) {
+//        normal compare condition
         if(*(line+index+i)==*(searchWord+i)){
             *(subWord+i) = *(line+index+i);
+//            compare the words with displacement of one letter
         }else if(*(line+index+i)!=*(searchWord+i)&&*(line+index+i+1)==*(searchWord+i)){
             *(subWord+i) = *(line+index+i+1);
+//            compare the words with displacement of one letter and check the letter after if the same as search word after
+//            displacement
         }else if(*(line+index+i)!=*(searchWord+i)&&*(line+index+i+1)!=*(searchWord+i)){
             return 0;
         }
@@ -56,6 +60,7 @@ void printWord(char* text,int index,int len){
     }
     printf("\n");
 }
+//finds similar words with dropping up to one letter
 void printSimilarWords(char searchWord[],int len){
     char text[MAX_TEXT_LINES*LINE];
     while(fgets(text, MAX_TEXT_LINES*LINE, stdin)){
@@ -72,7 +77,7 @@ void printSimilarWords(char searchWord[],int len){
         }
     }
 }
-
+//finds line that contain search word
 void printShowLines(char searchWord[],int len){
     char text[MAX_TEXT_LINES*LINE];
     while(fgets(text, MAX_TEXT_LINES*LINE, stdin)){
