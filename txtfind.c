@@ -11,7 +11,7 @@
 int getWordLen(char* w){
     int len = 0;
     for (; len < WORD; ++len) {
-        if(*(w+len)==' '||*(w+len)=='\n'||*(w+len)=='\t'||*(w+len)=='\r'||*(w+len)=='\0')
+        if(*(w+len)==' '||*(w+len)=='\n'||*(w+len)=='\t'||*(w+len)=='\0')
             return len;
     }
     return WORD;
